@@ -13,11 +13,11 @@ export class ContratoService{
 
   // Crear un nuevo contrato
   crearContrato(contrato: Contrato): Observable<Contrato> {
-    return this.http.post<Contrato>(environment.SERVER_URL, contrato);
+    return this.http.post<Contrato>(`${environment.SERVER_URL}/contrato`, contrato);
   }
 
   // Obtener todos los contratos
   obtenerContratos(): Observable<Contrato[]> {
-    return this.http.get<Contrato[]>(environment.SERVER_URL);
+    return this.http.get<Contrato[]>(`${environment.SERVER_URL}/contrato`);
   }
 }

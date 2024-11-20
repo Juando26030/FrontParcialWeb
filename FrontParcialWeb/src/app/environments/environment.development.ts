@@ -1,3 +1,3 @@
 export const environment = {
-  SERVER_URL: `http://localhost:8092`,
+  SERVER_URL: `http://localhost:8090`,
 };
