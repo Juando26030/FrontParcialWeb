@@ -1,0 +1,23 @@
+<div class="list-container">
+  <h2>Lista de Contratos</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Identificador</th>
+      <th>Valor</th>
+      <th>Contratante</th>
+      <th>Contratista</th>
+      <th>Fechas</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contrato of contratos">
+      <td>{{ contrato.identificador }}</td>
+      <td>{{ contrato.valor }}</td>
+      <td>{{ contrato.nombreContratante }}</td>
+      <td>{{ contrato.nombreContratista }}</td>
+      <td>{{ contrato.fechaInicial }} - {{ contrato.fechaFinal }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

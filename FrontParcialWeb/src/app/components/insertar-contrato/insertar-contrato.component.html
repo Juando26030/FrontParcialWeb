@@ -1,0 +1,47 @@
+<div class="form-container">
+  <h2>Crear Contrato</h2>
+  <form [formGroup]="contratoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="identificador">Identificador:</label>
+      <input id="identificador" formControlName="identificador" />
+    </div>
+
+    <div class="form-group">
+      <label for="valor">Valor:</label>
+      <input id="valor" type="number" formControlName="valor" />
+    </div>
+
+    <div class="form-group">
+      <label for="nombreContratante">Nombre Contratante:</label>
+      <input id="nombreContratante" formControlName="nombreContratante" />
+    </div>
+
+    <div class="form-group">
+      <label for="documentoContratante">Documento Contratante:</label>
+      <input id="documentoContratante" formControlName="documentoContratante" />
+    </div>
+
+    <div class="form-group">
+      <label for="nombreContratista">Nombre Contratista:</label>
+      <input id="nombreContratista" formControlName="nombreContratista" />
+    </div>
+
+    <div class="form-group">
+      <label for="documentoContratista">Documento Contratista:</label>
+      <input id="documentoContratista" formControlName="documentoContratista" />
+    </div>
+
+    <div class="form-group">
+      <label for="fechaInicial">Fecha Inicial:</label>
+      <input id="fechaInicial" type="date" formControlName="fechaInicial" />
+    </div>
+
+    <div class="form-group">
+      <label for="fechaFinal">Fecha Final:</label>
+      <input id="fechaFinal" type="date" formControlName="fechaFinal" />
+    </div>
+
+    <button type="submit" [disabled]="!contratoForm.valid">Crear</button>
+  </form>
+  <p>{{ mensaje }}</p>
+</div>
